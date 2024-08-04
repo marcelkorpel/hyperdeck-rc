@@ -1,5 +1,7 @@
 # Playing content with HyperDeck player remote control
 
+![screenshot](/screenshot.png?raw=true)
+
 ## Prerequisites
 
 Please ensure that all the clips have [the same format, frame rate, 
@@ -61,5 +63,9 @@ This HyperDeck player remote control makes use of the following
 pieces of open-source software components:
 
 - [Tauri](https://tauri.app), MIT license
+- [Serde](https://crates.io/crates/serde), MIT or Apache License v2.0
+- [Serde JSON](https://crates.io/crates/serde_json), MIT or Apache License v2.0
+- [telnet-rs](https://crates.io/crates/telnet), MIT license
+- [Tokio](https://crates.io/crates/tokio), MIT license
 - [Svelte](https://svelte.dev), MIT license
 - [Material Symbols](https://fonts.google.com/icons), Apache License v2.0
