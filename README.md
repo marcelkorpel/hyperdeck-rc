@@ -7,6 +7,11 @@
 Please ensure that all the clips have [the same format, frame rate, 
 and resolution](https://forum.blackmagicdesign.com/viewtopic.php?p=670924#p670924), 
 otherwise the HyperDeck will not play all the clips, only some of them.
+You can, however, create separate playlists/timelines for parts of your 
+screening, where the individual playlists contain only clips with the 
+same frame rate (converting media to the same format and resolution 
+should be doable; you shouldn't, of course, change the framerate of 
+an invidual clip).
 
 Connect your HyperDeck with the laptop using an ethernet cable.
 
@@ -14,7 +19,7 @@ Connect your HyperDeck with the laptop using an ethernet cable.
 
 Open the HyperDeck player remote control application and enter the 
 IP address the HyperDeck got assigned. To get this IP address, push 
-the MENU button on the HyperDeck, scroll to Setup, press MENU again, 
+the MENU button on the HyperDeck, scroll to Setup, press SET, 
 and scroll down until 'IP Address' is visible in the display. Click 
 the Connect button in the application. In the bottom part of the 
 window you will see a message from your HyperDeck containing the 
@@ -39,11 +44,18 @@ started, interfering with the user interface (e.g., controls are not
 locked and changing the timeline or, worse, unintentionally pressing 
 'Clear timeline' will result in unwanted behaviour).
 
-## Saving the timeline
+## Saving and opening the timeline
 
-Not implemented (yet). Please bear in mind that once you pull the 
-power chord of the HyperDeck, your timeline will be erased. After 
-a power-up the HyperDeck will reset the timeline to its initial state 
+After you created a timeline, press the Save button to save the 
+current timeline. If you want to load a previously saved timeline, 
+just click the Open button and select a file. Please note that after 
+connecting the Hyperdeck, one should always press 'Clear timeline' 
+before opening a timeline file, otherwise you might get messages 
+about clips not being found and your playlist will not be correct.
+
+Please bear in mind that once you pull the power chord of the 
+HyperDeck, your timeline will be erased. After a power-up the 
+HyperDeck will reset the timeline to its initial state 
 (i.e., the above mentioned possibly alphabetically sorted list).
 
 # Disclaimer
