@@ -17,6 +17,7 @@
     let timelinePosition: number = 0;
     let currentClip: number | undefined;
     let isPlaying: boolean = false;
+    let currentClipProgressBar: HTMLProgressElement;
 
     async function connect() {
         await invoke("connect", { host: ip, port: port });
@@ -269,6 +270,19 @@
         timeline = timeline; // trigger reactivity
     }
 
+    async function skipToFrame(event: MouseEvent) {
+        if (!isPlaying) {
+            const x = event.pageX - currentClipProgressBar.offsetLeft;
+            const clickedValue = Math.floor(
+                (x * currentClipProgressBar.max) /
+                    currentClipProgressBar.offsetWidth,
+            );
+            const frame = clickedValue + timeline[currentClip!].position;
+
+            await write("goto: timeline: " + frame);
+        }
+    }
+
     async function addTextToBuffer(text: string) {
         buffer += text.replaceAll("\r\n", "<br>") + "<br>";
         await tick();
@@ -443,6 +457,8 @@
                 <progress
                     value={timelinePosition - timeline[currentClip].position}
                     max={diskList[timeline[currentClip].clip].frames}
+                    on:click={(event) => skipToFrame(event)}
+                    bind:this={currentClipProgressBar}
                 />
                 {@html spanAroundFrames(
                     formatFrames(
