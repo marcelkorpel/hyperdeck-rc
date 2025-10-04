@@ -1,3 +1,6 @@
+**NOTE: this software is deprecated. Please use
+[HyperDeckRC (web version)](https://github.com/marcelkorpel/HyperDeckRC) instead.**
+
 # Playing content with HyperDeck player remote control
 
 ![screenshot](/screenshot.png?raw=true)
